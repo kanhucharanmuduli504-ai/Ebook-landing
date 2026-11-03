@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buri Adat Se Chukara – 30 Din Ka Step-by-Step Plan</title>
+<title>Buri Adat Se Chutkara – 30 Din Ka Step-by-Step Plan</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -26,7 +26,7 @@ body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,san
 .price b{font-size:40px;color:var(--navy);font-weight:800}
 .price span{color:var(--muted);font-size:14px}
 .sub{text-align:center;color:var(--muted);font-size:14px;margin-bottom:18px}
-.btn{display:block;width:100%;text-align:center;text-decoration:none;background:var(--gold);color:#1A1300;font-weight:800;font-size:18px;padding:16px;border-radius:12px;box-shadow:0 6px 16px rgba(217,158,0,.35);transition:background .15s,transform .15s}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;background:var(--gold);color:#1A1300;font-weight:800;font-size:18px;padding:16px;border-radius:12px;box-shadow:0 6px 16px rgba(217,158,0,.35);transition:background .15s,transform .15s;border:none;cursor:pointer}
 .btn:hover{background:var(--gold-d)}
 .btn:active{transform:translateY(1px)}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
@@ -51,11 +51,16 @@ ul.list li:last-child{border-bottom:0}
 @media(min-width:640px){.hero h1{font-size:36px}}
 </style>
 
-<!-- Meta Pixel Purchase Event Code -->
+<!-- Meta Pixel Base Code (Yahan apna Meta Pixel ID daal sakte hain agar alag se hai) -->
 <script>
-  fbq('track', 'Purchase');
+  function trackPurchase() {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Purchase', { value: 99.00, currency: 'INR' });
+    }
+    // Apna payment link yahan daalein
+    window.location.href = "YOUR_PAYMENT_LINK_HERE";
+  }
 </script>
-
 </head>
 <body>
 
@@ -63,4 +68,51 @@ ul.list li:last-child{border-bottom:0}
 
 <header class="hero">
   <div class="wrap">
-    <img class="cover" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAPAAoADASIAAhEBAxEB/8QAHQAAAAcBAQEAAAAAAAAAAAAAAgMEBQYHCAEACf/EAGMQAAEDAwIDBAYECQYHDQYCCwECAwQABREGIQcSMRNBUWEIFCJxgZEyQqGxFRYjUmJygsHRFzOSosLSJENTlLLh8BglRlZjc4OEhZPD0/E0NkRkdKMmlbPiNUVUVXXjN6TU/8QAHAEAAQUBAQEAAAAAAAAAAAAAAAECAwQFBgcI/8QAShEAAQMCBAIHBQUFBgYCAAcAAQACAwQRBRIhMUFRBhMiYXGBkTKhscHRFEJS4fAHFSOS0jNDYoKi8RYkRFNy4iXTFzRzk6Oywv/aAAwDAQACEQMRAD8Ay5Xq7ivVZUS5XDXjXDTSlC5mvV41ymlKvV7NerhppSrxrma6aDSFKuk1zNer1NSr1er1eoQvZr1er1CF7Ner1eoQvV6vV6hC7muZrxrtCF6vV6vUIXs16vV6hC9Xq9XqEJTijYsSRPktRYjLkh91QQ202kqUtR6AAdTRRpZaLxcLDcGrja5j0OWzktvMq5VJyMHep5c2U5N+F9rqJtr6qQp4Q6/WMjSN3x5s4oxPBniErppK6fFAH76Vp478R0gAaoknH5zTZ/s0oa4/cS8exf1r98Vo/2a5t78dGwh9X/RWgKfv9yQo4HcRnTgaTnj9YoH9qlKPR94lOdNMPD9Z9of2qXtekBxTGyLoV/9ntn+zS5nj/xcP0XC5/2Uk/cmoeuxv74i9XJ+WDhf3JpR6OPEtX/B5I98xkf2qNT6NfEpXWyMJ/WnM/3qfW+PfGE4xF5/+xyfuFKEceOMnX8EBXvszn7qd9oxXj1fqUZYu9R//cycRzubXCHvnN/xro9GLiIesG3p985FSRPHfjKelhB/7FdoaeOXGU/8G0q/7Fe/jUL6nFeBj9SnBsXeo0n0X+IJGSxa0++aP4V7/cwa9HVNoT75n/6tSb+W7jIr/gwn/wDJX/40E8ZuMZ66WH/5M/8AxqpJVY0NnR+qkayDjdRo+jHrkdV2cf8AWz/doC/Rq1oj6T1nH/WVH+zUkXxi4vnrpdI/7If/AI0S7xc4sqHt6YSB/wD0p7+NVxWY7+OL1VhsVLxDlGl+jvqxv6Uu0j/plf3aTOcB9SNfSm2v4OL/ALtSF3ihxQd3VpsD/sx7+NIneInEdf07AB/2c7/GrEdTjB9p8fqFJ1VH+FyYXOC9+aPtTLd8Fq/u1FtR6ee0zOTCkyI7z3IFqDJJCQemcgVOntda9V9OyAf9Qc/jUGnzXrtqAyb2VoU48kPhKOUoSCAQEnpgd1bFBJWueTUOaQBwVWpbThtogb96f5rytLaHgRopLU285fkOA4V2Q+inPcDn76hWc1MeK3ONVqb2DCI7SWAOgb5dsfHNQ2reHC8IlO79T58PIaKCrNpCzg3T9eO671Nat4RyBw+4Cv6iW2C4pMifyKOA4c8iAT58qfnWU0pKiAAST0rZd7c0jpDhjZ7FrVwtWtyOxEWhCXCXFpSFEexv1BNcz00kzRwU2UuzPBIGpIbuAPNS0Q1c7kF3QOqYXGjQ9ycv1lZYZS4uK62pXaII5ArnSSMgjPwIrOP8iOtJEODcIdo7eHcFJEVaX0ZUlQJSojOUjAySelWNq7jRpiDpX8S+GcFxpEzMf1jsi2lsOHCuUH2lLVnHMelS7jdru48M9H2OyWFxMefIQGUvBIUWmmkpSeUHbJJAz5GsTD312H1HV0keQTuOVj76NaNSdbjfv28FNII5G3eb5RuFQtq4Mawvd+uNngW9t9dud7GTIDwDDa8Z5ec9T5DJpFrXhhqXQMmM1eoKUIlHlZeZcDjbiu9OR0PkcVp+42lu1cL4dml6vj6an3MB2TcnsBx55f5R7Byn2iTjIOwGKjurJdi1FbtC6Rjajh6hnNXaKH323Ata0NoUVuKGTjIHj31epulVVJMHWBjuQbNdsB7Wb2bXG3D3qN1I0C3H9aKox6O3EEzmIirSygvJUvtTJQW0AY+koE46jA6n4Uni8A9dy77LtAtTba4oSpchx9KWCFDI5V/Wz4Abd+KvzU+srvM436c0rbZzrEFlhUuc030dJSogK8RgJ+dAjaru9449u2GNNcRaLTb1KfYT9Fx1SUnKvMFacfq1XHSXFcmYhn9mX7HQXsOO54Dvun/ZYr213sqP4eaR1fpXiu3DjWFmbeLQlUhUV6QltvlKcBYXnGPbBFOWtdKa64t6vvVzRZY7blqKIUhpE1BQwUpJwFKI5u8nHSrr0Opq4cUdfajcCeyhdhbUq7sNo5nP9EVGtL3VVs4Faq1So8r94enTAo9SXFdkikkxyc1H2hsbestGwHXd/aI32Gvf3pBA22UnTU+iofSXC3U2trfMuFlhNPxoauR1xb6GwDy823MRnbejbRwh1lfdPs3622cyoLyiltSHkcyzz8myM5+l5edXPoTn0X6Nd1uhHI9NZkPIJ6kuEMo+wA04a8vFw4acCtO2+zyVxLlKbjxkuN7LSVILjmPA52z51oy9I6x1Q6GnDTeTI299gO0TY+CjFMwNBdyuqXuvAbXlqlwIy7MJC5yihBjvJcShQGSFnonbvO3nTXrnhfqPh4Iqr5FaQ1LyGnWXQ4gqHVJI6HetBcY9T3/T1h0pZLZcXmLrdZDTLshs4cXypQFYPdlahmmH0ubmG4mm7QFBSip6Srx2CUA/HKqbhXSDEKiemZKG5ZM+172bx30/JLNTxtDiL3FveqY4W6Wj6y15abNMJEV5wrf5TgqQhJUUj34x8a0drPi03ww1nZdLM2WNDsKm2i9JIUhKG1Eg9mE7eyBk9cms06Ib1LEuzF801AmyJNucDnaMR1OJRsdlYGMEZBB7s1pjRnETS3HO2PWG+WRtM5pntHYro50EZALjS+qSCR4EZ76Z0riJqG1EzOsga2zgDq0n71vDbw4JaQ9nKDZx96p3jG/ZuJXECErQTC7lJlMBD4YYLfauhR9rBA+rjKum1NOo+BGttMWRy8TbewuMynne9XfDi2k+KkjuHeRnFXnwh4eWzQM3WE5UlsCNKVFYlyMfkY6UJcPMfesc36lF2m9WLSWnNTJu/EuBqd2e268ltToBSS2oFCU8ytiSNhgbCqzOkMlOW02HjMyPKNQ4udfU6jRtgeKcacO7UmhN/JNnBGGvTXA+83xsH1mYqQtvGxUUpDbY/pZ+dP3DTROoOGvDSamDbYytWyCtzs1uJKVL5uVCVLzgpCfaxnqTUe1hLe0b6O9itkZamJsxMRpJQcKC1K7YkeeRTnx31BdNL6J0xa493kw7hMfbZkS0vFLhShsBalK67qUCayZhPWTFrCLTSu3vqI9r2+7qbhSjKwa8B8VmjVl4n6j1DcLrc1IVOkvqW8W/o83TA67bbVor0Z0J07w1veoHfYS4+46VdMoZb/iVVDLtw84RQLROmMa7elyWWHHG2ESWip1YSSEj2d8nFWnpm82zhfwItNwuUNUln1ZtbkdHLl1b6s49rY7K7+4VtdIsRZVUDKWmY7tOa2xBbcDWwv4BQ08WWQuceCqr0Z4Bv/EybeX8qVEjPPlR69o6rlz/AFVLU8FbNeuIvGi826xw3ZzsZSY2EkBLaW0hJKlHZI5s9av7hdrqyavtFwvVqsQs8aO4WnCpDaS5yp5jugdAD31H+HjceFwyump1XGLZ7hqKRIlruUkApZK3FJazkjOOoGepqg7GpYq+asdFleA2NrTrYnXW29rE2HgpOoBYGXuNSqA1pwZ1doa3JuV0gsqhFQSt+M8HEtk9ArvGfHpVwxmFaL9F5bgJTIukcnA2JVIc5R/UpVcLpZLPwbvenZeuoOqLjIbcSyvtwp1alqTyJAKiTg79aduKMVoscPdCt4KJNwY7RI/yTCAFfDf7KlqsVmrephqRo2QuuAQHNYM17HUbprIgzMW8viqKa4B8QHZseKbIlsvpKw4qS3yJAxuognHUbdTUZ1loi9aEugtl8iiO+pAcQUrC0OIO3MlQ6jINaD4q641BG4q6X0xY5z0VtTrDr6Gjjtit3HKrxSEjp5mo16W0tld6sEQY7ZqM64o/oqWAn/RVWxhWO189TTx1DW5ZWuOl7i17E3PFRTQRta4tvoVXPB/QP8oWso9ukc4gMJMmWpJwS2kj2Qe4qJA+Jq8daccrfw71NF0jYrJEMOCW25XKvs0tZx7KANsgHJJ76aPRLhNNwNQ3JSR2inWWArwSApRH2j5VGOGMHRuvdd31nVkZ+dc7pOW5CbT2gSkZWpZUpJGNsdfCqeKPiq6+odVtL4oGjsjm7d242F+OwT4gWRtyaFxTz6QECxa81Bp1vR0i33S+TVOx3UxH0ErAAKec5wCPa3Pd7qqd7hjqiNq2NpN62hN4kpC244fQrIIJyVA4GySdzV92LQen7Bx5iQrBbhFZtlpXLe/KKXl1wlCfpE49lVEaJSrU3pKajuh9pq0srZbPcFAJaH9s0ygxp1FTmGn1jZEXgu9q5d2QbG1tR5cUSQ53XduTbRV3w60drXQnE9ttjTjE+7QYipJiuTEISltY5ArnBIz7Ww60l1lbNX8XeJ9yZasoRco4Qw+w2+FtRQgcvtO9Oufj0q9+H8lq5cQ+IupneUsx5DdubV4JZQef7hUe0/c1aK4L3rW7DaRdbw49P7RScnmddKGs+SQc48zUJxyb7SZhG0zZY2A6+08ZrHXYa9/elEAy2vpqfIJLwA4WXzQ+rLxJvsRLC0xW2WHW3AtDgWrKilQ8OQA++qqlaN1Jxe17qCfYoKpDS5rqlyHFhDTY5iEgqPfgDYZNXjw11XeG+Bty1Nfpz8x9Dcx5l145XypGEjP6+cUqjWONpXg/brAzqaJpWTMZbU9cXjgrcWOdzByDzHpnOwFVm4vUU1ZPPJYyuIjBAJaMvtGw1PDQcSnmFrmNaNhqsza54Z6l4eusC+QUttP5DT7TgcbWR1GR0PkcVFetaQ426gsauEFssbep4OobnHkMJMhp0KW4UpXzOEZJG23XvrN1d1gNfPW0vWVDbOBI2IuBsbHUXVCeNrHWahoWpKgpJIUNwQdxVj6lkvau4UW2/wAw3K1zzblyiMrfZKObjPQDOPeqq5qzeFaHDpTWSrllWn/UMOlQyPWP8nyZ25v9VS4raNjKgbscPENNx43tvxUlL2nGPgQfqolpDSWtdVuvRmLhHjSGk84bdSo8ye8hPhe4kfKpdH4DXVfS8W/8AZK/4VC9KXC82q8oesSHHZZSULbS2XOdPeCnwqwWdacThuiwlX/Z6v41TxKSua7/l5GhvI2v8FYo207mfuGk990Wj0d7279G82wfrBz+FCT6NWonPo3i0/EuD+zStvXfFpP0NOK//ACtX8aVN694yJxzabV/nS/41jPqscG00fqPokMdJ+B3vTcv0YNUJH/tdnPvW4P7Fe/3LmrCfZudm/wCmX/dp4TxD42Ae1plX/wCVSv40JPEXjgOmmnP/AMpV/GofteN/9+L1H0UZZSfgcmQ+i1rL/wDdbIf+mX/coP8AuWdcf+9rKP23R/Yp/HEfjpkY0077haVUJPEf0g/q6bfHusxv91SR1eNn+9i9VE5lP/23KPD0VteD/wB62Uf9av8A/V13/csa+B2kWNXukuf3Kko4j+kEB/7FmAe6zD+FCPEn0hcf+xZg91mH8K0o6jFLdqSP1CjLIPwuUYb9FniD3otZ/wCtH+FEuejDxCR/8NAX7pjY+9NSdXEjj2Ommpqf+xh/CjU8ROL/AH6ZkfGzo/hU4nxEf3kfqqxij4AqIO+jRxGT0trC/wBSTHf79FH0buI6f/cl8/qvsf36mK+J3F8H2tOL/wDsb7qD/KdxbHVunT8bMf7tTdbXf9yP1P1Tcg5KJHyceIbZ9rTU7/pG/wC9RZ9HbiEDvpyb/SY/v1K/5TeKfV2mD/8Ak4j+zQVcT+J31tMD/wDKy/hThNWD++j/AJj9UjmgcCo436OPEB3rpyaP6bH9+lbfo38Q1ddPSf6cf+9Tx/KdxN79ND/8pl/woxPFTiPjfTeD/wDSpf8ACpG1FZ/3WfzFRFzeRUQ1zwfv3D22tzLylhhx1fI1GDiXHF+KvZ2AG3fvUBz7qlWttQ3nUdzXKvBdbdBKQytBQG/JI/fUYPjWhB1mS8pBPIbKIm+y9Xq9XqsJCug0MGgV6
+    <h1>बुरी आदतों से छुटकारा</h1>
+    <p>30 दिन का प्रैक्टिकल और असरदार स्टेप-बाय-स्टेप गाइड</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <div class="price">
+      <b>₹99</b>
+      <span><del>₹499</del> (80% छूट)</span>
+    </div>
+    <div class="sub">तुरंत डाउनलोड करें और आज ही बदलाव शुरू करें</div>
+    
+    <!-- Buy Button -->
+    <button class="btn" onclick="trackPurchase()">अभी खरीदें (Buy Now)</button>
+    <div class="secure">🔒 100% सुरक्षित भुगतान</div>
+  </section>
+
+  <section class="card">
+    <h2>इस ई-बुक में आपको क्या मिलेगा?</h2>
+    <ul class="list">
+      <li><span class="n">1</span> 30 दिन का दैनिक एक्शन प्लान</li>
+      <li><span class="n">2</span> ट्रिगर्स और क्रेविंग्स को रोकने के तरीके</li>
+      <li><span class="n">3</span> आत्म-नियंत्रण और फोकस बढ़ाने की तकनीकें</li>
+      <li><span class="n">4</span> लाइफटाइम एक्सेस (मोबाइल और कंप्यूटर दोनों पर)</li>
+    </ul>
+  </section>
+
+  <section class="card note">
+    <div class="ico g">⚡</div>
+    <div>
+      <h3>तुरंत एक्सेस</h3>
+      <p>पेमेंट पूरा होते ही आपको सीधे PDF डाउनलोड लिंक मिल जाएगा।</p>
+    </div>
+  </section>
+
+  <footer class="contact">
+    <p>सहायता के लिए संपर्क करें</p>
+    <small>© 2026 सर्वाधिकार सुरक्षित।</small>
+  </footer>
+</main>
+
+<div class="sticky">
+  <button class="btn" onclick="trackPurchase()">अभी खरीदें - ₹99</button>
+</div>
+
+</body>
+</html>
